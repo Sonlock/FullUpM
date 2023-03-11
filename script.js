@@ -49,7 +49,7 @@ formulario.addEventListener('submit', (event) => {
         let estanque = document.querySelector('#estanque').value
         let observaciones = document.querySelector('#observaciones').value
 
-        let mensaje = 'send?phone=' + telefono + '&text= ' + codigo + *' %0AMovil :'* + _vehiculo_ + '%0ACargos : ' + todos + '%0AConos : ' + conos + '%0ANovedades : ' + novedades +'%0ALugar : ' + lugar + '%0AHora : ' + hora + '%0ABoucher : ' + boucher + '%0AEstanque : ' + estanque + '%0AObservaciones : ' + observaciones + ''
+        let mensaje = 'send?phone=' + telefono + '&text= ' + codigo + ' %0AMovil :' + _vehiculo_ + '%0ACargos : ' + todos + '%0AConos : ' + conos + '%0ANovedades : ' + novedades +'%0ALugar : ' + lugar + '%0AHora : ' + hora + '%0ABoucher : ' + boucher + '%0AEstanque : ' + estanque + '%0AObservaciones : ' + observaciones + ''
 
         if(isMobile()) {
             window.open(urlMobile + mensaje, '_blank')
