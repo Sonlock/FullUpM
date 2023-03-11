@@ -133,7 +133,7 @@ $( document ).ready(function() {
       
       //tomas la decisión que queres en base a los dos valores
       //en este caso si selecciona "nombre" y "ciudad" mostras el input text para el Nombre
-      if(opc1 == 1)
+      if(opc2 == 1)
         $("#carga").show()
         
     });
