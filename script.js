@@ -53,7 +53,7 @@ formulario.addEventListener('submit', (event) => {
         + '&text= ' + " _*" + codigo + "*_" + "%0a"
         + '*Movil :*' + " _" +vehiculo + "_" +"%0a"
         + '*Conos :*' + " _" +conos + "_" +"%0a"
-        + '*Novedades :*' + " _" + novedades + "_" + "%0a"
+        + '*Cargos Faltantes :*' + " _" + novedades + "_" + "%0a"
         + '*Lugar :*' + " _" + lugar + "_" + "%0a"
         + '*Hora :*' + " _" + hora + "_" + "%0a"
         + '*Boucher :*' + " _" + boucher + "_" + "%0a"
