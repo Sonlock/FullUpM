@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Agrega un comentario para describir el propósito de esta sección -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Agrega un título descriptivo para la página -->
+  <title>Formulario Carga Combustible</title>
+  
+  <!-- Agrega una imagen de icono para la pestaña del navegador -->
+  <link href="carga.jpg" rel="Shortcut Icon">
+  
+  <!-- Agrega un enlace al archivo CSS para aplicar estilos personalizados -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Agrega una referencia al archivo jQuery para usar JavaScript avanzado -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <!-- Agrupa los elementos HTML en contenedores lógicos -->
+  <div>
+    <h1>Carga de combustible</h1>
+    <p>Formulario para el envío de datos<br>
+      <!-- Agrega un enlace para reportar errores en la aplicación -->
+      <a href="https://wa.me/?text=*Informo que la app tiene un error:* %0A%0A" target="_blank" rel="noopener noreferrer">Reportar error en la app
+      </a>
+    </p>
+  </div>
+  
+  <!-- Agrega un contenedor para el formulario -->
+  <div>
+    <form id="formulario" class="formulario" action="#" method="get" onsubmit="abrirWhatsapp()">
+      <!-- Usa una etiqueta "label" para asociar el texto con el elemento "select" -->
+      <label for="codigo">Seleccione su Código</label>
+      <select id="codigo" class="boxinput" required>
+        <option>Seleccione su Codigo</option>
+        <option>JT3</option>
+        <option>IM-21</option>
+        <option>IM-30</option>
+        <option>IM-63</option>
+        <option>IM-83</option>
+        <option>IM-90</option>
+        <option>IM-92</option>
+        <option>IM-102</option>
+        <option>IM-110</option>
+        <option>IM-126</option>
+        <option>IM-127</option>
+        <option>IM-132</option>
+        <option>IM-137</option>
+        <option>IM-157</option>
+        <option>IM-171</option>
+        <option>IM-179</option>
+        <option>IM-180</option>
+        <option>IM-194</option>
+        <option>IM-196</option>
+        <option>IM-199</option>
+        <option>IM-205</option>
+        <option>IM-208</option>
+        <option>IM-212</option>
+        <option>IM-217</option>
+        <option>IM-220</option>
+      </select>
+    </div>
+    
+    <!-- Agrupa los elementos HTML en contenedores lógicos -->
+    <div>
+      <!-- Usa una etiqueta "label" para asociar el texto con el elemento "input" -->
+      <label for="vehiculo">Vehiculo</label
+        
+    <div>
+      <input class="car" maxlength="6" type="text" name="vehiculo" id="vehiculo" placeholder="Vehiculo" required>
+    </div>
+    <div class="titulosec">
+        
+      <h2>Verificar Cargos</h2>
+    </div>
+    <!-- 
+    <table id="verificar">
+      <tbody>
+    <tr>
+      <td>
+        <div id="opciones" >          
+          <input type="checkbox" name="alfa" value="OK" id="todos">
+          <label for="todos">Todos</label>
+        </divid=>
+      </td>
+    </tr>
+        <tr>
+              <td>
+                  <input type="checkbox" name="delta" id="aseo"> 
+                  <label for="aseo">Aseo</label>
+              </td>
+
+              <td>
+                <input type="checkbox" id="tarjeta">
+                <label for="tarjeta">Tarj. Combustible</label>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                <input type="checkbox" id="doc">
+                <label for="doc">Doc. Vehiculo</label>
+              </td>
+
+              <td>
+                <input type="checkbox" id="bitacora">
+                <label for="bitacora">Bitacora</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="llave">
+                <label for="llave">Llave Rueda</label>
+              </td>
+
+              <td>
+                <input type="checkbox" id="gata">
+                <label for="gata">Gata</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="rueda">
+                <label for="rueda">Rueda Repuesto</label>
+              </td>
+
+              <td>
+                <input type="checkbox" id="extintor">
+                <label for="extintor">Extintor</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="botiquin">
+                <label for="botiquin">Botiquin</label>
+              </td>
+              <td>
+                <input type="checkbox" id="chaleco">
+                <label for="chaleco">Chaleco Reflectante</label>
+              </td>
+              </tr>
+            <tr>
+              <td>
+              <br>
+
+              </td>
+            </tr>
+          </tbody>
+      </table>
+partial   -->
+
+      <div class="titulosec">
+      <input min="1" max="30" type="number" class="cono" id="conos" required>
+      <label for="conos">Conos</label>
+    </div>  
+    <div>
+      <textarea class="obser" name="novedades" id="novedades" placeholder="Cargos Faltantes" cols="30" rows="2"></textarea>
+    </div>
+    
+    <div class="radio" id="opciones" required>
+      <label2 for="si">Carga Combustible :</label2>
+      <input type="radio" name="opc1" id="si" value="1">
+      <label for="si">Si</label>
+      <input type="radio" name="opc1" id="no" value="2">
+      <label for="no">No</label>
+    </div>
+    
+    <div class="form-group" id="carga" style="display:none;">
+       <select for="lugar" class="select" id="lugar" placeholder="Lugar (Cuadrante)">
+        <option>No escojido</option>
+        <option>C -109</option>
+        <option>C -143</option>
+        <option>C -145</option>
+        <option>C -147</option>
+        <option>C -148</option>
+      </select>   
+      <br>
+
+      <input class="select" type="time" name="hora" id="hora" placeholder="Hora">
+      <br>
+    
+      <input class="select" type="number" name="bou" id="boucher" placeholder="Boucher" >
+      <br>
+    </div>
+    <div>
+      <select class="select" for="estanque" id="estanque" required>
+        <option>100 %</option>
+        <option> 90 %</option>
+        <option> 80 %</option>
+        <option> 70 %</option>
+        <option> 60 %</option>
+        <option> 50 %</option>
+        <option> 40 %</option>
+        <option> 30 %</option>
+        <option> 20 %</option>
+        <option> 10 %</option>
+      </select>
+    </div>
+    <div>
+        <textarea class="obser" name="observaciones" id="observaciones" placeholder="Observaciones Vehiculo" cols="30" rows="2"></textarea>
+        <br>
+    <div>
+        <button id="submit" type="submit" class="boton"><i >
+        <img src="whatsapp.svg" alt="Icone Whatsapp"></i> Enviar WhatsApp
+        </button>
+    </div>
+  </form>
+
+    <script type="text/javascript">
+      $(".box-input input").on("focus", function(){
+          $(this).addClass("focus");
+      });
+
+      $(".box-input input").on("blur", function(){
+          if($(this).val() == ""){
+              $(this).removeClass("focus");
+          }
+      });
+
+  </script>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="whatsapp.js"></script>
+  </body>
+  </html>
+  <!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+
+</html>
