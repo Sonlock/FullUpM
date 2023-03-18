@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Agrega un comentario para describir el propósito de esta sección -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Agrega un título descriptivo para la página -->
+  <title>Formulario Recepción Vehiculo</title>
+  
+  <!-- Agrega una imagen de icono para la pestaña del navegador -->
+  <link href="carga.jpg" rel="Shortcut Icon">
+  
+  <!-- Agrega un enlace al archivo CSS para aplicar estilos personalizados -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Agrega una referencia al archivo jQuery para usar JavaScript avanzado -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <!-- Agrupa los elementos HTML en contenedores lógicos -->
+  <div>
+    <h1>Recepción Vehiculos</h1>
+    <p>Formulario para el envío de datos<br>
+      <!-- Agrega un enlace para reportar errores en la aplicación -->
+      <a href="https://wa.me/?text=*Describa el error en la app :* %0A%0A" target="_blank" rel="noopener noreferrer">Reportar error en la app
+      </a>
+    </p>
+  </div>
+  
+  <!-- Agrega un contenedor para el formulario -->
+  <div>
+    <form id="formulario" class="form-group" action="#" method="get" onsubmit="abrirWhatsapp()">
+      <!-- Usa una etiqueta "label" para asociar el texto con el elemento "select" -->
+      <label for="codigo"><h3>Código</h3>
+      <select id="codigo" class="boxinput" required>
+        <option>JT3</option>
+        <option>I - 21</option>
+        <option>I - 30</option>
+        <option>I - 63</option>
+        <option>I - 83</option>
+        <option>I - 90</option>
+        <option>I - 92</option>
+        <option>I - 102</option>
+        <option>I - 110</option>
+        <option>I - 126</option>
+        <option>I - 127</option>
+        <option>I - 132</option>
+        <option>I - 137</option>
+        <option>I - 157</option>
+        <option>I - 171</option>
+        <option>I - 179</option>
+        <option>I - 180</option>
+        <option>I - 194</option>
+        <option>I - 196</option>
+        <option>I - 199</option>
+        <option>I - 205</option>
+        <option>I - 208</option>
+        <option>I - 212</option>
+        <option>I - 217</option>
+        <option>I - 220</option>
+      </select>
+    </div>
+    <br>
+    <!-- Agrupa los elementos HTML en contenedores lógicos -->
+    <div class="form-group">
+      <label for="vehiculo"><h3>PPU</h3>
+      <input class="cono" type="text" maxlength="4" name="vehiculo" id="vehiculo" placeholder="****" required>
+      <label for="">-</label>
+      <input class="cono" type="text" maxlength="2" name="ppu" id="ppu" placeholder="**" required>
+    </div>
+<br>
+    <script>
+      const inputText = document.getElementById('vehiculo');
+      
+      inputText.addEventListener('input', () => {
+      inputText.value = inputText.value.toUpperCase();
+      });
+
+      const nextInput = document.getElementById('conos');
+
+      inputNumber.addEventListener('keyup', (event) => {
+      inputNumber.value = inputNumber.value.toUpperCase().replace(/[^0-9]/g, '');
+      if (inputNumber.value.length === 4) {
+        nextInput.focus();
+      }
+    });
+
+    </script>        
+      <h3>Verificar Cargos</h3>
+    <!-- 
+    <table id="verificar">
+      <tbody>
+    <tr>
+      <td>
+        <div id="opciones" >          
+          <input type="checkbox" name="alfa" value="OK" id="todos">
+          <label for="todos">Todos</label>
+        </divid=>
+      </td>
+    </tr>
+        <tr>
+              <td>
+                  <input type="checkbox" name="delta" id="aseo"> 
+                  <label for="aseo">Aseo</label>
+              </td>
+
+              <td>
+                <input type="checkbox" id="tarjeta">
+                <label for="tarjeta">Tarj. Combustible</label>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                <input type="checkbox" id="doc">
+                <label for="doc">Doc. Vehiculo</label>
+              </td>
+
+              <td>
+                <input type="checkbox" id="bitacora">
+                <label for="bitacora">Bitacora</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="llave">
+                <label for="llave">Llave Rueda</label>
+              </td>
+
+              <td>
+                <input type="checkbox" id="gata">
+                <label for="gata">Gata</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="rueda">
+                <label for="rueda">Rueda Repuesto</label>
+              </td>
+
+              <td>
+                <input type="checkbox" id="extintor">
+                <label for="extintor">Extintor</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="botiquin">
+                <label for="botiquin">Botiquin</label>
+              </td>
+              <td>
+                <input type="checkbox" id="chaleco">
+                <label for="chaleco">Chaleco Reflectante</label>
+              </td>
+              </tr>
+            <tr>
+              <td>
+              <br>
+
+              </td>
+            </tr>
+          </tbody>
+      </table>
+partial   -->
+<br>
+      <div class="titulosec">
+      <input maxlength="2" name="conos" type="text" class="cono" id="conos" required>
+      <label for="conos">Conos</label>
+    </div>  
+
+<br>
+
+    <div>
+      <textarea class="obser" name="novedades" id="novedades" placeholder="Cargos Faltantes" cols="30" rows="2"></textarea>
+    </div>
+    <br>
+    <div>
+    <div class="form-group" id="opciones" required>
+      <label2 for="si"><h3>Carga Combustible :</h3></label2>
+      <br>
+
+      <input type="radio" name="opc1" id="si" value="1">
+      <label for="si">Si</label>
+      <input type="radio" name="opc1" id="no" value="2">
+      <label for="no">No</label>
+
+      <select class="selectestanque" for="estanque" id="estanque" required>
+        <option>100 %</option>
+        <option> 90 %</option>
+        <option> 80 %</option>
+        <option> 70 %</option>
+        <option> 60 %</option>
+        <option> 50 %</option>
+        <option> 40 %</option>
+        <option> 30 %</option>
+        <option> 20 %</option>
+        <option> 10 %</option>
+      </select>
+    </div>
+    <br>
+    <div class="form-group" id="carga" style="display:none;">
+      <label for="">Lugar</label>
+       <select for="lugar" class="lugar" id="lugar">
+        <option>No se carga</option>
+        <option>C-109 = Manquehue Nte./Los Militares</option>
+        <option>C-143 = Rotonda Atenas</option>
+        <option>C-145 = Las Condes 9595</option>
+        <option>C-147 = Las Condes/San Francisco de Asis</option>
+        <option>C-148 = Manquehue Sur/Isabel La Catolica</option>
+      </select>   
+<label for="">Boucher:</label>
+      <input class="cono" type="number" name="bou" id="boucher" placeholder="Boucher">
+
+      <div class="form-group">
+    <br>
+        <label for="hora">Hora</label>
+        <input class="cono" type="number" name="hora" id="hora" placeholder="Hora">
+        <label for="">:</label>
+        <input class="cono" type="number" name="minuto" id="minuto" placeholder="Minuto">
+        <label for="">Hrs.</label>
+    </div>
+  </div>
+
+<br>
+
+<div>
+        <textarea class="obser" name="observaciones" id="observaciones" placeholder="Observaciones Vehiculo" cols="30" rows="2"></textarea>
+        <br>
+    <div>
+        <button id="submit" type="submit" class="boton"><i >
+        <img src="whatsapp.svg" alt="Icone Whatsapp"></i> Enviar WhatsApp
+        </button>
+    </div>
+  </form>
+
+    <script type="text/javascript">
+      $(".box-input input").on("focus", function(){
+          $(this).addClass("focus");
+      });
+
+      $(".box-input input").on("blur", function(){
+          if($(this).val() == ""){
+              $(this).removeClass("focus");
+          }
+      });
+
+  </script>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="whatsapp.js"></script>
+  </body>
+  </html>
+  <!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+
+</html>
