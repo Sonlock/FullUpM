@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Agrega un comentario para describir el propósito de esta sección -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Agrega un título descriptivo para la página -->
+  <title>Formulario Recepción Vehiculo</title>
+  
+  <!-- Agrega una imagen de icono para la pestaña del navegador -->
+  <link href="carga.jpg" rel="Shortcut Icon">
+  
+  <!-- Agrega un enlace al archivo CSS para aplicar estilos personalizados -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Agrega una referencia al archivo jQuery para usar JavaScript avanzado -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <!-- Agrupa los elementos HTML en contenedores lógicos -->
+  <div>
+    <h1>Recepción Vehiculos</h1>
+    <p>Formulario para el envío de datos<br>
+      <!-- Agrega un enlace para reportar errores en la aplicación -->
+      <a href="https://wa.me/?text=*Describa el error en la app :* %0A%0A" target="_blank" rel="noopener noreferrer">Reportar error en la app
+      </a>
+    </p>
+  </div>
+  
+  <!-- Agrega un contenedor para el formulario -->
+  <div>
+    <form id="formulario" class="form-group" action="#" method="get" onsubmit="abrirWhatsapp()">
+      <!-- Usa una etiqueta "label" para asociar el texto con el elemento "select" -->
+      <label for="codigo"><h3>Código</h3>
+      <select id="codigo" class="boxinput" required>
+        <option>JT3</option>
+        <option>I - 18</option>
+        <option>I - 21</option>
+        <option>I - 30</option>
+        <option>I - 63</option>
+        <option>I - 83</option>
+        <option>I - 90</option>
+        <option>I - 92</option>
+        <option>I - 102</option>
+        <option>I - 110</option>
+        <option>I - 126</option>
+        <option>I - 127</option>
+        <option>I - 132</option>
+        <option>I - 137</option>
+        <option>I - 157</option>
+        <option>I - 171</option>
+        <option>I - 179</option>
+        <option>I - 180</option>
+        <option>I - 194</option>
+        <option>I - 196</option>
+        <option>I - 199</option>
+        <option>I - 205</option>
+        <option>I - 208</option>
+        <option>I - 212</option>
+        <option>I - 217</option>
+        <option>I - 220</option>
+      </select>
+    </div>
+    <br>
+    <!-- Agrupa los elementos HTML en contenedores lógicos -->
+    <div class="form-group">
+      <label for="vehiculo"><h3>PPU</h3>
+      <input class="conos" type="text" maxlength="4" name="vehiculo" id="vehiculo" placeholder="XXXX" required onkeypress="return soloMayus(event)">
+      <label for="ppu">-</label>
+      <input class="conos" type="text" maxlength="2" name="ppu" id="ppu" placeholder="XX" required onkeypress="return soloNumeros(event)">
+
+      </div>
+
+
+    </div>
+    <!-- Solo numeros en el input PPU 
+
+
+function soloMayus(event) {
+  // Obtiene el código de la tecla presionada
+  var codigoTecla1 = event.keyCode ? event.keyCode : event.which;
+
+  // Verifica si el código de la tecla es un número
+  if (codigoTecla < 65 || codigoTecla > 57) {
+    // Si la tecla presionada no es un número, no permite la entrada
+    event.preventDefault();
+  }
+}
+
+function soloNumeros(event) {
+  // Obtiene el código de la tecla presionada
+  var codigoTecla = event.keyCode ? event.keyCode : event.which;
+
+  // Verifica si el código de la tecla es un número
+  if (codigoTecla < 48 || codigoTecla > 57) {
+    // Si la tecla presionada no es un número, no permite la entrada
+    event.preventDefault();
+  }
+}
+
+-->
+<script>
+
+function soloMayus(event) {
+  // Obtiene el código de la tecla presionada
+  var codigoTecla = event.keyCode ? event.keyCode : event.which;
+
+  // Verifica si el código de la tecla es un número
+  if (codigoTecla < 65 || codigoTecla > 90) 
+  if (codigoTecla < 97 || codigoTecla > 122) {
+    // Si la tecla presionada no es un número, no permite la entrada
+    event.preventDefault();
+  }
+}
+  
+
+
+
+</script>
+
+<!-- Solo letras mayusculas en el input vehiculo -->
+
+
+<br>
+
+<script>
+
+const inputText = document.getElementById('vehiculo');
+      
+      inputText.addEventListener('input', () => {
+      inputText.value = inputText.value.toUpperCase();
+      });
+
+</script>
+
+    <script>
+
+
+vehiculo.addEventListener('keyup', function() {
+  if (this.value.length === 4) {
+    ppu.focus();
+  }
+});
+
+ppu.addEventListener('keyup', function() {
+  if (event.target.value.length === parseInt(event.target.getAttribute("maxlength"))){
+  conos.focus();
+  }
+});
+
+conos.addEventListener('input', function() {
+  if (this.value.length === 2) {
+    ppu.focus();
+  }
+});
+    </script>        
+      <h3>Verificar Cargos</h3>
+    <!-- 
+    <table id="verificar">
+      <tbody>
+    <tr>
+      <td>
+        <div id="opciones" >          
+          <input type="checkbox" name="alfa" value="OK" id="todos">
+          <label for="todos">Todos</label>
+        </divid=>
+      </td>
+    </tr>
+        <tr>
+              <td>
+                  <input type="checkbox" name="delta" id="aseo"> 
+                  <label for="aseo">Aseo</label>
+              </td>
+
+              <td>
+                <input type="checkbox" id="tarjeta">
+                <label for="tarjeta">Tarj. Combustible</label>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                <input type="checkbox" id="doc">
+                <label for="doc">Doc. Vehiculo</label>
+              </td>
+
+              <td>
+                <input type="checkbox" id="bitacora">
+                <label for="bitacora">Bitacora</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="llave">
+                <label for="llave">Llave Rueda</label>
+              </td>
+
+              <td>
+                <input type="checkbox" id="gata">
+                <label for="gata">Gata</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="rueda">
+                <label for="rueda">Rueda Repuesto</label>
+              </td>
+
+              <td>
+                <input type="checkbox" id="extintor">
+                <label for="extintor">Extintor</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="botiquin">
+                <label for="botiquin">Botiquin</label>
+              </td>
+              <td>
+                <input type="checkbox" id="chaleco">
+                <label for="chaleco">Chaleco Reflectante</label>
+              </td>
+              </tr>
+            <tr>
+              <td>
+              <br>
+
+              </td>
+            </tr>
+          </tbody>
+      </table>
+partial   -->
+<br>
+      <div class="titulosec">
+      <input maxlength="2" name="conos" type="text" class="conos" id="conos" placeholder="XX" required>
+      <label for="conos">Conos</label>
+    </div>  
+
+<br>
+
+    <div>
+      <textarea class="obser" name="novedades" id="novedades" placeholder="Cargos Faltantes" cols="30" rows="2"></textarea>
+    </div>
+
+    <script>
+//      const conos = document.getElementById("conos");
+//      const novedades = document.getElementById("novedades");
+    
+      conos.addEventListener("keyup", (event) => {
+        if (event.target.value.length === 2) {
+          novedades.focus();
+        }
+      });
+    </script>
+    
+    <br>
+    <div>
+    <div class="form-group" id="opciones" required>
+      <label for="si"><h3>Carga Combustible :</h3></label>
+      <br>
+
+      <input type="radio" name="opc1" id="si" value="1">
+      <label for="si">Si</label>
+      <input type="radio" name="opc1" id="no" value="2">
+      <label for="no">No</label>
+      </div>
+
+      <br>
+<div>
+      <select class="selectestanque" for="estanque" id="estanque" style="display:none" required>
+        <option>100 %</option>
+        <option> 90 %</option>
+        <option> 80 %</option>
+        <option> 70 %</option>
+        <option> 60 %</option>
+        <option> 50 %</option>
+        <option> 40 %</option>
+        <option> 30 %</option>
+        <option> 20 %</option>
+        <option> 10 %</option>
+      </select>
+<br>
+
+<script>
+
+const siRadio = document.getElementById('si');
+const noRadio = document.getElementById('no');
+const estanqueSelect = document.getElementById('estanque');
+const boucherinput = document.getElementById('boucher');
+
+siRadio.addEventListener('click', function() {
+  estanqueSelect.style.display = 'block';
+  boucherinput.style.display = 'block';  
+});
+
+noRadio.addEventListener('click', function() {
+  estanqueSelect.style.display = 'block';
+  boucherinput.style.display = 'none'; 
+});
+
+</script>
+
+    <div class="form-group" id="carga" style="display:none;">
+      <div>
+      <label for="boucher"  id="titutlo">Boucher:</label>
+      <input class="boucher" type="number" name="bou" id="boucher" placeholder="XXXXXX">
+      </div>
+      <br>
+      <div>
+      <label for="">Lugar</label>
+       <select for="lugar" class="lugar" id="lugar" onchange="document.getElementById('hora').focus()">
+        <option>Sin Carga</option>
+        <option>C-109 = Manquehue Nte./Los Militares</option>
+        <option>C-143 = Rotonda Atenas</option>
+        <option>C-145 = Las Condes 9595</option>
+        <option>C-147 = Las Condes/San Francisco de Asis</option>
+        <option>C-148 = Manquehue Sur/Isabel La Catolica</option>
+      </select>
+      </div>
+
+
+
+      <div class="form-group">
+    <br>
+        <label for="hora">Hora</label>
+        <input class="hora" type="text" name="hora" id="hora" placeholder="XX">
+        <label for="">:</label>
+        <input class="minuto" type="text" name="minuto" id="minuto" placeholder="XX">
+        <label for="">Hrs.</label>
+    </div>
+  </div>
+
+  <script>
+
+
+const boucherInput = document.getElementById('boucher');
+boucherInput.addEventListener('keyup', function(event) {
+        if (this.value.length === 4) {
+            document.getElementById('lugar').focus();
+        }
+    })
+
+    const horaInput = document.getElementById('hora');
+    horaInput.addEventListener('keyup', function(event) {
+        if (this.value.length === 2) {
+            document.getElementById('minuto').focus();
+        }
+    });
+
+    const minutoInput = document.getElementById('minuto');
+    minutoInput.addEventListener('keyup', function(event) {
+        if (this.value.length === 2) {
+            document.getElementById('observaciones').focus();
+        }
+    });
+</script>
+
+<br>
+
+<div>
+        <textarea class="obser" name="observaciones" id="observaciones" placeholder="Observaciones Vehiculo" cols="30" rows="2"></textarea>
+        <br>
+    <div>
+        <button id="submit" type="submit" class="boton"><i >
+        <img src="whatsapp.svg" alt="Icone Whatsapp"></i> Enviar WhatsApp
+        </button>
+    </div>
+  </form>
+
+    <script type="text/javascript">
+      $(".box-input input").on("focus", function(){
+          $(this).addClass("focus");
+      });
+
+      $(".box-input input").on("blur", function(){
+          if($(this).val() == ""){
+              $(this).removeClass("focus");
+          }
+      });
+
+  </script>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="whatsapp.js"></script>
+  </body>
+  </html>
+  <!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+
+</html>
